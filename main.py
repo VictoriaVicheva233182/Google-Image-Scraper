@@ -30,14 +30,17 @@ def worker_thread(search_key):
 
 if __name__ == "__main__":
     #Define file path
-    webdriver_path = os.path.normpath(os.path.join(os.getcwd(), 'webdriver', webdriver_executable()))
+    #webdriver_path = os.path.normpath(os.path.join(os.getcwd(), 'webdriver', webdriver_executable()))
+    web_dir = "C:/Users/victo/Downloads/2023-24c-fai1-adsai-VictoriaVicheva233182/Google-Image-Scraper"
+    web_ex = "chromedriver.exe"
+    webdriver_path = os.path.join(web_dir, web_ex)
     image_path = os.path.normpath(os.path.join(os.getcwd(), 'photos'))
 
     #Add new search key into array ["cat","t-shirt","apple","orange","pear","fish"]
-    search_keys = list(set(["cat","t-shirt"]))
+    search_keys = list(set(["healthy skin dermatology tested"]))
 
     #Parameters
-    number_of_images = 5                # Desired number of images
+    number_of_images = 101               # Desired number of images
     headless = True                     # True = No Chrome GUI
     min_resolution = (0, 0)             # Minimum desired image resolution
     max_resolution = (9999, 9999)       # Maximum desired image resolution
